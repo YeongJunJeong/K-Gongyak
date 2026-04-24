@@ -2,6 +2,10 @@
 
 **더 나은 대한민국을 위해, 더 나은 지방을 위해 사용해주세요.**
 
+🔗 **[https://k-gongyak.vercel.app](https://k-gongyak.vercel.app)**
+
+![K-공약 미리보기](public/preview.png)
+
 2026년 제9회 전국동시지방선거 출마자를 위한 **지역 맞춤형 공약 생성 서비스**입니다.  
 출마 지역·직위·후보자 성향을 입력하면, 웹 검색으로 최신 현안을 수집한 뒤 3단계 AI 분석으로 해당 지역에 정말 필요한 공약안을 생성합니다.
 
@@ -17,29 +21,6 @@
 - 3단계 AI 파이프라인 (지역 브리핑 → 공약 설계 → 검증)
 - 실시간 진행 상황 스트리밍
 - 공문서 스타일 UI · 인쇄/PDF 출력
-
-## 기술 스택
-
-- Next.js 16 · TypeScript
-- Tailwind CSS
-- OpenAI API (gpt-4o)
-- Tavily Search API
-
-## 시작하기
-
-```bash
-# 1. 설치
-npm install
-
-# 2. 환경변수 설정
-cp .env.local.example .env.local
-# OPENAI_API_KEY 입력 (필수)
-# TAVILY_API_KEY 입력 (선택 - 웹 검색 기반 최신 현안 반영)
-
-# 3. 실행
-npm run dev
-# → http://localhost:3000
-```
 
 ---
 

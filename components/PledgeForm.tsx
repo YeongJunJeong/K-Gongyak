@@ -372,7 +372,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
                     key={p.value}
                     onClick={() => setParty(p.value)}
                     title={p.hint}
-                    className={`text-[12px] px-2 py-2 border transition-colors ${
+                    className={`text-[11px] px-1 py-2 border transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${
                       active
                         ? "bg-gov-navy text-white border-gov-navy"
                         : "bg-white border-gov-gray-300 hover:border-gov-navy"
@@ -428,7 +428,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
                     type="button"
                     key={d.value}
                     onClick={() => toggleDemographic(d.value)}
-                    className={`text-[12px] px-2 py-2 border transition-colors text-left ${
+                    className={`text-[11px] px-2 py-2 border transition-colors text-left whitespace-nowrap ${
                       active
                         ? "bg-gov-navy/5 border-gov-navy text-gov-navy font-semibold"
                         : "bg-white border-gov-gray-300 hover:border-gov-navy"
