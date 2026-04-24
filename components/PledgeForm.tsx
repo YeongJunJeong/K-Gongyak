@@ -371,7 +371,6 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
                     type="button"
                     key={p.value}
                     onClick={() => setParty(p.value)}
-                    title={p.hint}
                     className={`text-[11px] px-1 py-2 border transition-colors whitespace-nowrap overflow-hidden text-ellipsis ${
                       active
                         ? "bg-gov-navy text-white border-gov-navy"
