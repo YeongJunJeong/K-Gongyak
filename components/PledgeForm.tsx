@@ -261,11 +261,11 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
                   >
                     {c.glyph}
                   </div>
-                  <div className="text-[13px] font-semibold whitespace-nowrap">
+                  <div className="text-[15px] sm:text-[13px] font-semibold whitespace-nowrap">
                     {c.label}
                   </div>
                   <div
-                    className={`text-[10px] mt-0.5 leading-tight whitespace-nowrap ${
+                    className={`text-[11px] sm:text-[10px] mt-0.5 leading-tight whitespace-nowrap ${
                       disabled
                         ? "text-gov-gray-300"
                         : active
@@ -468,11 +468,11 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
           </div>
         )}
 
-        <div className="pt-2 flex justify-end gap-3 border-t border-gov-gray-200 -mx-6 -mb-6 px-6 py-4 bg-gov-gray-50">
+        <div className="-mx-4 -mb-4 sm:-mx-6 sm:-mb-6 md:-mx-8 md:-mb-8 px-4 sm:px-6 md:px-8 py-4 border-t border-gov-gray-200 bg-gov-gray-50 flex sm:justify-end">
           <button
             type="submit"
             disabled={!canSubmit}
-            className={`px-8 py-3 font-semibold tracking-tight transition-colors ${
+            className={`w-full sm:w-auto px-8 py-3 font-semibold tracking-tight transition-colors ${
               canSubmit
                 ? "bg-gov-navy hover:bg-gov-navy-dark text-white"
                 : "bg-gov-gray-200 text-gov-gray-400 cursor-not-allowed"
