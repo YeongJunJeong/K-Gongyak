@@ -19,7 +19,7 @@ export default function HomePage() {
       <Header />
 
       <section className="bg-white border-b border-gov-gray-200 no-print">
-        <div className="max-w-6xl mx-auto px-6 py-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-6">
           <div className="flex items-center gap-3 text-sm text-gov-gray-500 mb-1">
             <span className="px-2 py-0.5 bg-gov-navy text-white text-xs font-semibold">
               공고
@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
 
       <main className="flex-1 bg-gov-gray-50">
-        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6 py-6 sm:py-8 grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6">
           <div className="lg:col-span-2">
             <PledgeForm
               onResult={setResult}

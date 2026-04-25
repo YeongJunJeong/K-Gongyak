@@ -7,20 +7,20 @@ export default function Header() {
         <div className="flex-1 bg-gov-blue" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           {/* 정부 상징 느낌의 엠블럼 */}
-          <div className="w-10 h-10 rounded-full bg-white/10 border border-white/30 flex items-center justify-center">
-            <div className="w-6 h-6 rounded-full relative overflow-hidden">
+          <div className="shrink-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 border border-white/30 flex items-center justify-center">
+            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full relative overflow-hidden">
               <div className="absolute inset-0 bg-gov-red" />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gov-blue" />
             </div>
           </div>
-          <div>
-            <div className="text-[11px] tracking-[0.3em] text-white/70">
+          <div className="min-w-0">
+            <div className="text-[10px] sm:text-[11px] tracking-[0.2em] sm:tracking-[0.3em] text-white/70 truncate">
               REPUBLIC OF KOREA · LOCAL ELECTION 2026
             </div>
-            <div className="text-lg font-bold tracking-tight">
+            <div className="text-base sm:text-lg font-bold tracking-tight break-keep">
               제9회 전국동시지방선거 공약생성기
             </div>
           </div>

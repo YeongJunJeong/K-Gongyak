@@ -196,7 +196,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
         </span>
       </div>
 
-      <div className="p-6 md:p-8 space-y-6">
+      <div className="p-4 sm:p-6 md:p-8 space-y-6">
         {/* 1. 광역 지역 */}
         <Field
           label="1. 광역자치단체"
@@ -228,7 +228,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
 
         {/* 2. 출마 대분류 */}
         <Field label="2. 출마 구분" required hint="출마할 직위의 대분류">
-          <div className="grid grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
             {CATEGORIES.map((c) => {
               const disabled =
                 (c.value === "기초단체장" || c.value === "기초의원") &&
@@ -335,11 +335,11 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
                       onChange={(e) => setSubtypeValue(e.target.value)}
                       className="mt-1 accent-gov-navy"
                     />
-                    <div>
-                      <div className="font-medium text-gov-gray-800">
+                    <div className="flex-1 min-w-0">
+                      <div className="font-medium text-gov-gray-800 break-keep">
                         {s.label}
                       </div>
-                      <div className="text-xs text-gov-gray-500 mt-0.5">
+                      <div className="text-xs text-gov-gray-500 mt-0.5 break-keep">
                         관할: {s.scope}자치 · 대분류: {s.category}
                       </div>
                     </div>
@@ -363,7 +363,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
 
           {/* 정당 성향 */}
           <Field label="정당 성향" hint="공약의 톤과 프레이밍 결정">
-            <div className="grid grid-cols-4 md:grid-cols-7 gap-1">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-1">
               {PARTY_OPTIONS.map((p) => {
                 const active = party === p.value;
                 return (
@@ -389,7 +389,7 @@ export default function PledgeForm({ onResult, onLoadingChange, onProgress }: Pr
             label="핵심 관심사"
             hint={`중점 영역 선택 (최대 4개 · ${interests.length}/4)`}
           >
-            <div className="grid grid-cols-3 md:grid-cols-3 gap-1">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-1">
               {INTERESTS.map((i) => {
                 const active = interests.includes(i.value);
                 const disabled = !active && interests.length >= 4;
@@ -502,12 +502,16 @@ function Field({
 }) {
   return (
     <div>
-      <div className="flex items-baseline gap-2 mb-2">
-        <label className="text-sm font-semibold text-gov-gray-700">
+      <div className="mb-2 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+        <label className="text-sm font-semibold text-gov-gray-700 whitespace-nowrap">
           {label}
           {required && <span className="text-gov-red ml-1">*</span>}
         </label>
-        {hint && <span className="text-xs text-gov-gray-500">· {hint}</span>}
+        {hint && (
+          <span className="text-xs text-gov-gray-500 leading-snug">
+            · {hint}
+          </span>
+        )}
       </div>
       {children}
     </div>
